@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>SonOff Web Switch Controler</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        function goFront() {
+            $.post("https://maker.ifttt.com/trigger/WebClickON/with/key/dMkj1K-Llxg5skxquxkhD8",
+                function (data) {
+                    console.log("Data Loaded: " + data);
+                });
+        }
+
+        function goLeft() {
+            $.post("https://maker.ifttt.com/trigger/WebClickOFF/with/key/dMkj1K-Llxg5skxquxkhD8",
+                function (data) {
+                    console.log("Data Loaded: " + data);
+                });
+        }
+
+    </script>
+</head>
+<body>
+    <table style="width:100%;">
+        <caption>
+            <h1><strong>WEB BASED - SONOFF CONTROL</strong></h1>
+        </caption>
+        <tr>
+            <td class="auto-style1">
+                <input atr="Click to on" height="325px" onclick="goFront();" src="images/lightbulb_On.ico" type="image" width="325px" />
+            </td>
+            <td rowspan="3" colspan="0">
+                <input height="325px" onclick="goLeft();" src="images/lightbulb_Off.ico" type="image" width="325px" />
+            </td>
+        </tr>
+		<tr>
+<td></br></td>
+</tr>
+    </table>
+</body>
+</html>
