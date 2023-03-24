@@ -10,6 +10,10 @@
         A[Client] --> B[Load Balancer] 
         B --> C[Server01] 
         B --> D[Server02]
+		D --> E[[Module01]]
+		E --> F{Ok?}
+		F -.Yes.-> C
+		F -.No.-> D
   </pre>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
